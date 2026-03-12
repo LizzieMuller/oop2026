@@ -36,12 +36,10 @@ public class Cliente {
     }
 
     public String getNome() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getNome'");
     }
 
     public String getPontos() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getPontos'");
     }
 }
