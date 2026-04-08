@@ -1,0 +1,37 @@
+@startuml v4-diagram
+
+top to bottom direction
+
+class CustoServicoV4
+class CustoServicoDTO
+enum Estado
+enum Promocao
+
+CustoServicoV4 -down-> ValorBrutoCalculator
+CustoServicoV4 -down-> ValorPagarCalculator
+CustoServicoV4 -down-> DescontoCalculator
+CustoServicoV4 -down-> IssqnCalculator
+CustoServicoV4 --> CustoServicoDTO
+
+interface ValorBrutoCalculator
+interface DescontoCalculator
+interface IssqnCalculator
+interface ValorPagarCalculator
+
+CalcValorBrutoPadrao .up.|> ValorBrutoCalculator
+CalcPromoSemPromo .up.|> DescontoCalculator
+CalcPromoPrimeiraCompra .up.|> DescontoCalculator
+CalcPromoBlackFriday .up.|> DescontoCalculator
+CalcIssqnRS .up.|> IssqnCalculator
+CalcIssqnSC .up.|> IssqnCalculator
+CalcValorPagarPadrao .up.|> ValorPagarCalculator
+
+class CalcValorBrutoPadrao
+class CalcPromoSemPromo
+class CalcPromoPrimeiraCompra
+class CalcPromoBlackFriday
+class CalcIssqnRS
+class CalcIssqnSC
+class CalcValorPagarPadrao
+
+@enduml

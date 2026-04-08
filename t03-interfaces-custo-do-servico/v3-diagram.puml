@@ -1,0 +1,21 @@
+@startuml v3-diagram
+
+class CustoServicoV3
+class CustoServicoDTO
+class CalculadoraValorBruto
+class CalculadoraDesconto
+class CalculadoraISSQN
+enum Estado
+enum Promocao
+
+CustoServicoV3 --> CalculadoraValorBruto
+CustoServicoV3 --> CalculadoraDesconto
+CustoServicoV3 --> CalculadoraISSQN
+CustoServicoV3 --> Promocao
+CustoServicoV3 --> Estado
+CustoServicoV3 --> CustoServicoDTO
+
+CalculadoraDesconto --> Promocao
+CalculadoraISSQN --> Estado
+
+@enduml
